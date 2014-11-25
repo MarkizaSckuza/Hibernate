@@ -1,0 +1,20 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://217.146.253.33/tram_groundhog_day</property>
+        <property name="connection.username">student</property>
+        <property name="connection.password">P@ssw0rd</property>
+        <property name="connection.pool_size">10</property>
+        <property name="hibernate.connection.username">student</property>
+        <property name="show_sql">true</property>
+        <property name="hbm2ddl.auto">update</property>
+        <property name="hibernate.connection.autocommit">false</property>
+        <property name="current_session_context_class">thread</property>
+        <mapping class="logic.Phone"/>
+        <mapping class="logic.PhoneBook"/>
+        <mapping class="logic.PhoneCall"/>
+    </session-factory>
+</hibernate-configuration>
